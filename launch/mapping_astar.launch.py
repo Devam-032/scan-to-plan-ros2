@@ -15,12 +15,12 @@ def generate_launch_description():
 
     goal_x_arg = DeclareLaunchArgument(
         'goal_x',
-        default_value='2.0',
+        default_value='1.5',
         description='A* goal X position in odom frame'
     )
     goal_y_arg = DeclareLaunchArgument(
         'goal_y',
-        default_value='2.0',
+        default_value='1.5',
         description='A* goal Y position in odom frame'
     )
 
