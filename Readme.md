@@ -4,6 +4,14 @@ A from-scratch implementation of probabilistic occupancy grid mapping and A* pat
 
 ---
 
+## Demo
+
+![Demo](assets/demo.gif)
+
+> Grey = unknown, White = free space, Black = occupied walls, Green line = A\* planned path
+
+---
+
 ## What This Project Does
 
 The node subscribes to a TurtleBot3's LiDAR scan and odometry, builds a probabilistic 2D occupancy grid of the environment in real time, and plans an A* path from the robot's current position to a user-defined goal — all published and visualised in RViz2.
@@ -71,8 +79,11 @@ turtlebot3_tuts/
 │   └── mapping_astar.launch.py  ← launches Gazebo + node + RViz2
 ├── .rviz2/
 │   └── mapping.rviz             ← RViz2 config
+├── assets/
+│   └── demo.gif                 ← demo recording
 ├── CMakeLists.txt
-└── package.xml
+├── package.xml
+└── README.md
 ```
 
 ---
