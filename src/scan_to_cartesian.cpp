@@ -150,13 +150,11 @@ private:
         RCLCPP_INFO_THROTTLE(this->get_logger(), *this->get_clock(), 1000,
             "Valid hits: %zu / %zu", n, msg.ranges.size());
 
-        // Robot's current cell = start
         int start_col = static_cast<int>(
             (posx_ - grid_.info.origin.position.x) / grid_.info.resolution);
         int start_row = static_cast<int>(
             (posy_ - grid_.info.origin.position.y) / grid_.info.resolution);
 
-        // Goal cell — hardcoded for now, you'll make this dynamic later
         int goal_col = static_cast<int>(
             (goal_x_ - grid_.info.origin.position.x) / grid_.info.resolution);
         int goal_row = static_cast<int>(
